@@ -38,7 +38,7 @@ class SARSAgent:
         s = self.state
         s1 = next_state
         a = self.action
-        a1 = self.act()  # SARSA: Choose the next action as well
+        a1 = self.act()
         self.q_table[s][a] = self.q_table[s][a] + self.alpha * (
             reward + self.gamma * self.q_table[s1][a1] - self.q_table[s][a]
         )
